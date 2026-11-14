@@ -198,3 +198,109 @@ pela URA da Caixa". Considere como contexto o artefato @B_relatorio_assistente_v
 ---
 
 **Fim da sessão.** 8 rodadas, 28 perguntas, 28 decisões (D1–D16 aceitas pelo usuário rodada a rodada; D17–D28 por delegação expressa do usuário na Rodada 4).
+
+---
+---
+
+# Sessão 2 — `/grill-me` de revisão, com respostas do próprio aluno
+
+> **Data:** 14/11/2026, à tarde. **Motivo:** na primeira sessão, as decisões foram aceitas em bloco ou delegadas. Nesta segunda sessão, refeita sobre o mesmo mapa, o aluno respondeu com as próprias palavras às Rodadas S1 a S3. As respostas estão transcritas **literalmente**, sem correção. A partir da Rodada S4, o aluno delegou de novo as respostas ao agente, e o registro diz isso de forma expressa.
+> As decisões novas recebem o prefixo **E** (E1, E2...) e prevalecem sobre as da sessão 1 quando divergem.
+
+## Rodada S1 — Escopo e propósito do mapa
+
+❓ **Q1 — Quem está no mapa.** Trabalhador formal, doméstico, pescador artesanal (seguro-defeso, no MTE desde 1º/11/2025) ou resgatado? Restringir ao formal ou incluir alguma variante?
+➡️ Recomendação: só o formal; as variantes vão para nota.
+
+❓ **Q2 — Qual problema o mapa revela.** (a) quem responde quando a URA não resolve; (b) onde e por que o cidadão desiste; (c) a dependência de dados de terceiros.
+➡️ Recomendação: (a), com (b) e (c) como pontos de falha.
+
+❓ **Q3 — Retaguarda invisível.** O motor de habilitação e o CNIS entram, embora o cidadão nunca "fale" com eles?
+➡️ Recomendação: entram.
+
+❓ **Q4 — Para quem é o mapa.** (a) gestor público; (b) órgão de controle; (c) cidadão.
+➡️ Recomendação: (a).
+
+**Respostas do aluno:**
+> Q1. só o formal poque é alguém que tipicamente liga para a ura da caixa.
+> Q2. o mais correto para ser uma mistura das 3 hipóteses, com uma predominância para o "a", pois a dependência de dados também é um ponto crítico.
+> Q3. Sim, entram no mapa, pois, sem eles, o mapa esconde porque a ura não sabe explicar um indeferimento.
+> Q4. O mapa é essencialmente para o gestor por isso o raci e os pontos de falha com responsável.
+
+**Decisões:**
+- **E1:** só o trabalhador formal, porque é quem tipicamente liga para a URA da Caixa. Confirma a D1.
+- **E2:** o foco é a combinação das três hipóteses, com predominância do (a). Por decisão do aluno, a **dependência de dados** ganha o peso de ponto crítico, e não fica como nota lateral. Isso diverge da recomendação, que punha (b) e (c) só como pontos de falha.
+- **E3:** a retaguarda entra. Confirma a D3.
+- **E4:** o leitor é o gestor público. Isso justifica o RACI e os pontos de falha com responsável.
+
+---
+
+## Rodada S2 — A URA, a IA e a dependência de dados
+
+❓ **Q5 — A URA é IA?** Não há prova de reconhecimento de voz (pode ser só por teclas, DTMF), e o Grok criticou o rótulo "IA" na v1.
+➡️ Recomendação: "sistema automatizado (teclas); uso de IA não confirmado".
+
+❓ **Q6 — Quais atores de IA entram.** O assistente do WhatsApp Caixa e a Celeste (MTE) entram? Eles resolvem o problema do cidadão ou só o empurram para outro canal?
+➡️ Recomendação: entram, como canais de destino do transbordo.
+
+❓ **Q7 — Como mostrar a dependência de dados.** (a) o empregador como ator; (b) as bases agrupadas; (c) os dois, com ponto de falha. E quem é o responsável final pelo dado errado do empregador: empregador, MTE ou Caixa?
+➡️ Recomendação: (c), com o MTE como responsável final.
+
+**Respostas do aluno:**
+> Q5. não se poderia categorizar a ura como IA, conforme avaliação feita inclusive pelo grok.
+> Q6. creio que eles apenam empurram o cidadão para outro canal.
+> q7. o ministério é o responsável final porque, afinal, é o destinatário e o gestor do próprio sistema.
+
+**Decisões:**
+- **E5:** a URA **não** é IA. O aluno apoia a decisão na falha F21 da auditoria do Grok.
+- **E6:** o assistente do WhatsApp e a Celeste entram como IA, mas com a **crítica do aluno**: eles "apenas empurram o cidadão para outro canal". No mapa, isso vira o ponto de falha (iv), de transbordo em cadeia sem resolução.
+- **E7:** pelo dado errado do empregador, o **A é o MTE**, porque é o destinatário do dado e o gestor do sistema. A forma de representar o problema ficou pendente e foi resolvida na Q7b.
+
+---
+
+## Rodada S3 — Atores humanos e a forma da dependência de dados
+
+❓ **Q7b — Empregador e bases.** O empregador como ator próprio, as bases agrupadas, ou os dois?
+➡️ Recomendação: os dois.
+
+❓ **Q8 — Quem atende de verdade.** Separar o atendente terceirizado (R), contratado pela CECOT 121/2026, da Caixa (A)? Há consequência jurídica dessa terceirização para o cidadão?
+➡️ Recomendação: separar.
+
+❓ **Q9 — Ator inferido.** Incluir o "gestor/fiscal do contrato (Caixa)" como [INFERÊNCIA], com base na Lei 13.303/2016?
+➡️ Recomendação: incluir.
+
+❓ **Q10 — Acessibilidade.** O intérprete de Libras (ICOM) entra? Qual a importância disso para o gestor?
+➡️ Recomendação: entrar, como ator humano da linha de frente.
+
+**Respostas do aluno:**
+> q7b. eu quero o empregador como ator próprio;
+> q8. o atendente executa e a caixa responde perante o cidadão. como advogado, não vejo, neste momento, uma consequência jurídica relevante sobre essa dinâmica.
+> q9. deve ser incluído e marcado como inferência porque é ele quem cobra os níveis de serviço da fila.
+> q10. sim, deve entrar, com ator humano na linha de frente. a importância disso é o incremento da inclusão.
+
+**Decisões:**
+- **E8:** o empregador é ator próprio, a origem do dado. O aluno não pediu para retirar as "Bases de vínculo", então elas continuam como retaguarda.
+- **E9:** o atendente terceirizado é R, e a Caixa é A perante o cidadão. O aluno registrou, como advogado, que não vê "neste momento" consequência jurídica relevante na terceirização para o cidadão.
+- **E10:** o gestor/fiscal do contrato entra, marcado como [INFERÊNCIA], porque "é ele quem cobra os níveis de serviço da fila".
+- **E11:** o intérprete de Libras entra como humano da linha de frente. A justificativa do aluno é o incremento da inclusão, e o mapa passa a mostrar esse caminho como critério de inclusão para o gestor.
+
+---
+
+## Rodadas S4 a S6 — decisões delegadas ao agente
+
+**Resposta do aluno ao receber a Rodada S4:** "a partir de agora, responda você mesmo às próximas rodadas."
+
+As decisões abaixo são **do agente** (Claude Code), tomadas por delegação expressa e coerentes com E1 a E11. **Não** são respostas do aluno.
+
+**S4 — Quem responde quando a URA não resolve**
+- **Q11 (RACI dividido):** sim. O A é a Caixa no pagamento e o MTE na concessão, como já estava na D13 e na D14. Isso é coerente com a E7.
+- **Q12 (Dataprev e CODEFAT):** a Dataprev é R técnico, o MTE é A e o CODEFAT é C. Confirma a D15.
+- **Q13 (desistência):** fica sem responsável, apontada como lacuna. Confirma a D16. Para o gestor (E4), o mapa registra que o fiscal do contrato (E10) seria o candidato natural a medir essa lacuna.
+
+**S5 — Controle e destinos:** as D17 a D23 da sessão 1 ficam mantidas.
+
+**S6 — Fechamento:** as D24 a D28 ficam mantidas. A E6 acrescenta o ponto de falha (iv).
+
+---
+
+**Fim da sessão 2.** 3 rodadas com respostas do próprio aluno (S1 a S3, 11 perguntas) e 3 rodadas delegadas ao agente (S4 a S6). Divergências da sessão 2 em relação à 1: a E2 (dependência de dados como ponto crítico) e a E6 (crítica aos canais de IA).

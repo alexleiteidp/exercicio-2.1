@@ -20,5 +20,5 @@
 4. [B_relatorio_assistente_v2.md](B_relatorio_assistente_v2.md): v2, que trata cada falha da auditoria v1
 5. [B_relatorio_auditoria_v2.md](B_relatorio_auditoria_v2.md): segunda auditoria
 6. [B_relatorio_assistente_v3.md](B_relatorio_assistente_v3.md): versão final, com os deltas ligados aos gatilhos da auditoria v2
-7. [C_grill_transcript.md](C_grill_transcript.md): transcript da sessão `/grill-me` (8 rodadas)
+7. [C_grill_transcript.md](C_grill_transcript.md): transcript do `/grill-me`. A sessão 1 tem 8 rodadas; a sessão 2 é de revisão, com as Rodadas S1 a S3 respondidas pelo aluno
 8. [C_mapa_atores.md](C_mapa_atores.md): mapa final, com diagrama mermaid e tabela RACI de 22 atores

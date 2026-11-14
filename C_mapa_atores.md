@@ -4,7 +4,8 @@
 > **Canal:** URA/telefone **0800 726 0207** (Atendimento CAIXA Cidadão).
 > **Órgãos:** Caixa Econômica Federal (agente pagador e dona do canal) e Ministério do Trabalho e Emprego (concedente).
 > **Retrato:** novembro de 2026 (D2).
-> **Origem:** decisões D1–D28 de `C_grill_transcript.md`, sobre a pesquisa `B_relatorio_assistente_v3.md`.
+> **Origem:** decisões D1–D28 (sessão 1) e E1–E11 (sessão 2, respondida pelo aluno) de `C_grill_transcript.md`, sobre a pesquisa `B_relatorio_assistente_v3.md`.
+> **Leitor:** o gestor público (E4).
 > **Formato:** diagrama mermaid e tabela RACI (D4).
 
 **Legenda dos marcos da jornada (D26):**
@@ -69,7 +70,9 @@ flowchart LR
   %% ---------- Pontos de falha (D27) ----------
   F1[/"Falha i: URA não explica indeferimento → A = MTE"/] -.- URA
   F2[/"Falha ii: fila sem transbordo → A = Caixa (contrato)"/] -.- Fila
-  F3[/"Falha iii: dado do empregador errado → A = MTE"/] -.- Bases
+  F3[/"Falha iii (crítica, E2): dado do empregador errado → A = MTE (E7)"/] -.- Empregador
+  F4[/"Falha iv (E6): IA só empurra para outro canal → transbordo em cadeia"/] -.- WhatsApp
+  F4 -.- Celeste
 ```
 
 ## 2. Tabela RACI de atores
@@ -81,7 +84,7 @@ R = Responsável (executa) · A = Aprovador (responde) · C = Consultado · I = 
 | 1 | Cidadão (trabalhador formal) | Humano | Demandante | Iniciar a ligação, identificar-se (NIS) | — | — | Status da parcela; canal de destino | t0 | t4 (resposta, encaminhamento ou desistência) | D1, D3, D16 |
 | 2 | URA 0800 726 0207 | Sistema automatizado (DTMF; IA não confirmada) | Linha de frente | Autoatendimento de pagamento; transbordo | — | Motor de habilitação | — | t0 | t3/t4 | D5, D14 |
 | 3 | Atendente humano do call center (terceirizado) | Humano | Linha de frente | Atender o transbordo; encaminhar dúvida de concessão | — | Motor de habilitação | — | t3 | t4 | D9, D13 |
-| 4 | Intérprete de Libras (ICOM) | Humano | Linha de frente | Intermediar o atendimento acessível | — | — | — | t3 (sob demanda) | t4 | D12 |
+| 4 | Intérprete de Libras (ICOM) | Humano | Linha de frente | Intermediar o atendimento acessível (inclusão, E11) | — | — | — | t3 (sob demanda) | t4 | D12 |
 | 5 | Gestor/fiscal do contrato (Caixa) [INFERÊNCIA] | Humano | Normatizador/gestor | Fiscalizar níveis de serviço do teleatendimento | — | — | Indicadores do call center | Fora da ligação | — | D10, D27 |
 | 6 | Caixa Econômica Federal | Institucional | Normatizador/gestor | Pagar a parcela | **A** do canal e da dúvida de pagamento | MTE | Liberação da parcela | t2 (dado de pagamento) | t4 | D9, D14 |
 | 7 | Assistente virtual do WhatsApp Caixa | IA | Canal de destino | Responder dúvidas de pagamento por chat | — | — | — | t3 | t4 | D6 |
@@ -93,7 +96,7 @@ R = Responsável (executa) · A = Aprovador (responde) · C = Consultado · I = 
 | 13 | Motor de habilitação (Sistema Seguro-Desemprego) | Sistema automatizado | Retaguarda | Decidir automaticamente o direito (art. 4º, Res. 957) | — | Bases de vínculo | URA e atendente (via consulta) | Antes de t0 | — | D7, D15 |
 | 14 | Dataprev | Institucional | Retaguarda | Operar o motor e o portal (R técnico) | — | — | — | Retaguarda | — | D15 |
 | 15 | Bases de vínculo (CNIS, eSocial, Empregador Web, FGTS) | Sistema automatizado | Retaguarda | Fornecer dados de vínculo | — | — | Motor de habilitação | Antes de t0 | — | D8, D27 |
-| 16 | Empregador | Humano | Retaguarda (fonte) | Transmitir o desligamento | — | — | Bases de vínculo | Antes de t0 | — | D11, D27 |
+| 16 | Empregador | Humano | Retaguarda (fonte) | Transmitir o desligamento | — | — | Bases de vínculo | Antes de t0 | — | D11, D27, E2, E7, E8 |
 | 17 | CODEFAT | Institucional | Normatizador/gestor | Editar resoluções (Res. 957/2022) | — | **C** do MTE | — | Fora da ligação | — | D15 |
 | 18 | SAC/Ouvidoria Caixa | Institucional | Controle e defesa | Responder reclamação sobre o canal | — | — | **I** | Após t4 | — | D18 |
 | 19 | TCU | Institucional | Controle e defesa | Auditar (Ac. 135/2024, 1114/2025, 1621/2026) | — | — | **I** | Fora da ligação | — | D17 |
@@ -119,6 +122,13 @@ R = Responsável (executa) · A = Aprovador (responde) · C = Consultado · I = 
 - **D16:** a **desistência** aparece como saída sem responsável. Esse é o principal achado crítico do mapa.
 - **D19:** ANPD e Justiça do Trabalho ficaram fora porque só aparecem como inferência na v3.
 
+## 3.1 Decisões da sessão 2, respondida pelo aluno
+
+- **E2 e E7:** a **dependência de dados** é ponto crítico, e não só uma nota lateral. Quando o empregador transmite um dado errado, o motor nega o benefício e a URA só repete o status. O responsável final é o **MTE**, "destinatário e gestor do próprio sistema", nas palavras do aluno.
+- **E6:** os canais de IA (WhatsApp Caixa e Celeste) **não resolvem** o problema: "apenas empurram o cidadão para outro canal". Por isso o mapa marca a falha (iv), de transbordo em cadeia.
+- **E9:** a terceirização não muda quem responde perante o cidadão, que continua sendo a Caixa. O aluno, advogado, não vê "neste momento" consequência jurídica relevante.
+- **E10 e E11:** o fiscal do contrato entra porque "cobra os níveis de serviço da fila". O caminho em Libras entra pelo "incremento da inclusão".
+
 ## 4. Limitações
 
 - Não estão confirmados em fonte primária:
@@ -127,4 +137,7 @@ R = Responsável (executa) · A = Aprovador (responde) · C = Consultado · I = 
   - o vencedor da CECOT 121/2026;
   - o operador do 158.
 - O ator 5 (Gestor/fiscal do contrato) é **[INFERÊNCIA]**, a partir da Lei 13.303/2016.
-- **Método:** as decisões D17 a D28 foram tomadas por **delegação expressa do entrevistado ao agente**, a partir da Rodada 4. O registro está em `C_grill_transcript.md`.
+- **Método:**
+  - As decisões D17 a D28 (sessão 1) foram tomadas por **delegação expressa do entrevistado ao agente**, a partir da Rodada 4.
+  - Na sessão 2, as decisões E1 a E11 vêm das respostas literais do aluno (Rodadas S1 a S3).
+  - As Rodadas S4 a S6 foram de novo delegadas ao agente. O registro está em `C_grill_transcript.md`.
